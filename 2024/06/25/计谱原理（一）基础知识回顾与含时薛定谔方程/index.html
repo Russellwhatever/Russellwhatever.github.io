@@ -16,22 +16,22 @@
   <meta name="author" content="RuswhY">
   <meta name="keywords" content="">
   
-    <meta name="description" content="简介输入文件是任何计算模型软件包的基础。输入文件极其简单，这是因为其构建在严格的框架以内，你的参数并非为了“创造”，而是为了“回忆”，告诉软件包你想模仿的计算模式。最常用的计算软件包当属VASP，其输入文件主要是INCAR、POTCAR、POSCAR、KPOINTS，分别用于记录计算参数和模式、赝势、分子位点等。这里用函数类比，POTCAR和KOINTS是变量的部分，输入分子或晶体的具体结构信息。">
+    <meta name="description" content="10-1假设 $\mu$ 为常数，关于不同取值的S作 $\alpha-S$ 图![[作业10-1.png]] 10-2$$\begin{align*}P|m\rangle&amp;&#x3D;-i\sqrt\frac{\omega}{2}(a-a^\dagger)|m\rangle\&amp;&#x3D;-i\sqrt{\omega&#x2F;2}(\sqrt m|m-1\rangle-\sqrt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="01-LASP中的输入与输出文件">
-<meta property="og:url" content="https://github.com/Russellwhatever/russellwhatever.github.io/2024/04/11/LASP%E4%B8%AD%E7%9A%84%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6/index.html">
+<meta property="og:title" content="计谱原理（一）基础知识回顾与含时薛定谔方程">
+<meta property="og:url" content="https://github.com/Russellwhatever/russellwhatever.github.io/2024/06/25/%E8%AE%A1%E8%B0%B1%E5%8E%9F%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%90%AB%E6%97%B6%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B/index.html">
 <meta property="og:site_name" content="RuswhY&#39;s daily blog">
-<meta property="og:description" content="简介输入文件是任何计算模型软件包的基础。输入文件极其简单，这是因为其构建在严格的框架以内，你的参数并非为了“创造”，而是为了“回忆”，告诉软件包你想模仿的计算模式。最常用的计算软件包当属VASP，其输入文件主要是INCAR、POTCAR、POSCAR、KPOINTS，分别用于记录计算参数和模式、赝势、分子位点等。这里用函数类比，POTCAR和KOINTS是变量的部分，输入分子或晶体的具体结构信息。">
+<meta property="og:description" content="10-1假设 $\mu$ 为常数，关于不同取值的S作 $\alpha-S$ 图![[作业10-1.png]] 10-2$$\begin{align*}P|m\rangle&amp;&#x3D;-i\sqrt\frac{\omega}{2}(a-a^\dagger)|m\rangle\&amp;&#x3D;-i\sqrt{\omega&#x2F;2}(\sqrt m|m-1\rangle-\sqrt">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-04-10T16:10:53.000Z">
-<meta property="article:modified_time" content="2024-04-11T07:48:53.685Z">
+<meta property="article:published_time" content="2024-06-24T20:09:14.000Z">
+<meta property="article:modified_time" content="2024-06-25T04:10:21.767Z">
 <meta property="article:author" content="RuswhY">
-<meta property="article:tag" content="计算化学">
+<meta property="article:tag" content="计算谱学原理">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>01-LASP中的输入与输出文件 - RuswhY&#39;s daily blog</title>
+  <title>计谱原理（一）基础知识回顾与含时薛定谔方程 - RuswhY&#39;s daily blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -226,7 +226,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="01-LASP中的输入与输出文件"></span>
+            <span id="subtitle" data-typed-text="计谱原理（一）基础知识回顾与含时薛定谔方程"></span>
           
         </div>
 
@@ -237,8 +237,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-04-11 00:10" pubdate>
-          2024年4月11日 凌晨
+        <time datetime="2024-06-25 04:09" pubdate>
+          2024年6月25日 凌晨
         </time>
       </span>
     
@@ -305,12 +305,14 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">01-LASP中的输入与输出文件</h1>
+            <h1 id="seo-header">计谱原理（一）基础知识回顾与含时薛定谔方程</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>输入文件是任何计算模型软件包的基础。<br>输入文件极其简单，这是因为其构建在严格的框架以内，你的参数并非为了“创造”，而是为了“回忆”，告诉软件包你想模仿的计算模式。<br>最常用的计算软件包当属VASP，其输入文件主要是INCAR、POTCAR、POSCAR、KPOINTS，分别用于记录计算参数和模式、赝势、分子位点等。这里用函数类比，POTCAR和KOINTS是变量的部分，输入分子或晶体的具体结构信息。<br>LASP的主要输入文件是lasp.in、input.arc、</p>
+                <h2 id="10-1"><a href="#10-1" class="headerlink" title="10-1"></a>10-1</h2><p>假设 $\mu$ 为常数，关于不同取值的S作 $\alpha-S$ 图<br>![[作业10-1.png]]</p>
+<h2 id="10-2"><a href="#10-2" class="headerlink" title="10-2"></a>10-2</h2><p>$$<br>\begin{align*}<br>P|m\rangle&amp;&#x3D;-i\sqrt\frac{\omega}{2}(a-a^\dagger)|m\rangle\<br>&amp;&#x3D;-i\sqrt{\omega&#x2F;2}(\sqrt m|m-1\rangle-\sqrt{m+1}|m+1\rangle)\<br>&amp;&#x3D;-i\sqrt{ \frac{\omega}{2} }(\sqrt{ m }\ket{m-1} -\sqrt{ m+1 }\ket{m+1} )<br>\end{align*}<br>$$<br>$$<br>\begin{align*}<br>[\hat H,Q]|m\rangle&amp;&#x3D;\sqrt{ \frac{1}{w} }([\hat{H},a^{\dagger}]\ket{m}+[\hat{H},a]\ket{m}) \<br>&amp;&#x3D;\sqrt{ \frac{1}{2\omega} }(\omega a^{\dagger}\ket{m} -\omega a\ket{m} )\<br>&amp;&#x3D;\sqrt{ \frac{2}{\omega} }(a^{\dagger}-a)\ket{m} \<br>\end{align*}<br>$$<br>得证：<br>$$<br>\begin{align*}<br>\hat{P}<em>{nm}&#x3D;(i[\mathcal{H},\hat{Q}])</em>{nm}<br>\end{align*}<br>$$</p>
+<p>\hat{P}<em>{nm}&#x3D;(i[\mathcal{H},\hat{Q}])</em>{nm}</p>
 
                 
               </div>
@@ -323,7 +325,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/Russellwhatever/russellwhatever.github.io/tags/%E8%AE%A1%E7%AE%97%E5%8C%96%E5%AD%A6/" class="print-no-link">#计算化学</a>
+        <a href="/Russellwhatever/russellwhatever.github.io/tags/%E8%AE%A1%E7%AE%97%E8%B0%B1%E5%AD%A6%E5%8E%9F%E7%90%86/" class="print-no-link">#计算谱学原理</a>
       
     </div>
   
@@ -335,8 +337,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>01-LASP中的输入与输出文件</div>
-      <div>https://github.com/Russellwhatever/russellwhatever.github.io/2024/04/11/LASP中的输入与输出文件/</div>
+      <div>计谱原理（一）基础知识回顾与含时薛定谔方程</div>
+      <div>https://github.com/Russellwhatever/russellwhatever.github.io/2024/06/25/计谱原理（一）基础知识回顾与含时薛定谔方程/</div>
     </div>
     <div class="license-meta">
       
@@ -348,7 +350,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年4月11日</div>
+          <div>2024年6月25日</div>
         </div>
       
       
@@ -379,12 +381,6 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
-                    
-                      <a href="/Russellwhatever/russellwhatever.github.io/2024/04/11/tex/" title="tex">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">tex</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
                     
                   </article>
                   <article class="post-next col-6">
