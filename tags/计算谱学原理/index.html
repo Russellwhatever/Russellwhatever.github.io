@@ -1,37 +1,166 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post-collapse.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>计算谱学原理 | RuswhY's daily blog</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="">
 
-{% block title %}{{ __('title.tag') }}: {{ page.tag }} | {{ config.title }}{% endblock %}
+  <link rel="stylesheet" href="https://unpkg.com/lxgw-wenkai-screen-webfont@1.7.0/lxgwwenkaiscreen.css">
 
-{% block content %}
+  
+  
+<link rel="stylesheet" href="/project/fonts/sea-font.css">
 
-  {#################}
-  {### TAG BLOCK ###}
-  {#################}
-  <div class="post-block tag">
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <{% if theme.seo %}h2{% else %}h1{% endif %}>{#
-        #}{{ page.tag }}{#
-        #}<small>{{  __('title.tag')  }}</small>
-        </{% if theme.seo %}h2{% else %}h1{% endif %}>
-      </div>
+  
+  
+<link rel="stylesheet" href="/project/css/main.css">
 
-      {% for post in page.posts %}
-        {{ post_template.render(post) }}
-      {% endfor %}
+
+  
+  <meta property="og:type" content="website">
+<meta property="og:title" content="RuswhY&#39;s daily blog">
+<meta property="og:url" content="https://russellwhatever.github.io/project/tags/%E8%AE%A1%E7%AE%97%E8%B0%B1%E5%AD%A6%E5%8E%9F%E7%90%86/index.html">
+<meta property="og:site_name" content="RuswhY&#39;s daily blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="RuswhY">
+<meta name="twitter:card" content="summary">
+
+  <style>
+    :root {
+      --sea-color-primary: #10b981;
+    }
+  </style>
+
+  
+<script src="/project/js/global.js"></script>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <header class="sea-header">
+    <nav class="sea-nav-wrap">
+  <h1 class="sea-nav-logo" title="">
+    <a href="/project/">RuswhY's daily blog</a>
+  </h1>
+  <div class="sea-nav-menus">
+    <div class="sea-menu-pc-wrap">
+  
+    <a
+      class="sea-menu-link"
+      
+        target="_blank"
+      
+      href="https://github.com/Russellwhatever/russellwhatever.github.io/"
+    >
+      ruswhy
+    </a>
+  
+</div>
+
+    <div id="sea-mobile-nav-toggle">
+      <i class="sea-font">bars</i>
     </div>
-
   </div>
-  {#####################}
-  {### END TAG BLOCK ###}
-  {#####################}
+</nav>
+  </header>
+  <main id="sea-main-wrapper">
+    <div class="sea-page-card-wrapper">
+  <h1 class="sea-page-card-title">
+    计算谱学原理
+  </h1>
 
-  {% include '_partials/pagination.swig' %}
-{% endblock %}
+  <ul>
+    
+      <li class="sea-tags-post-item">
+        <a href="/project/2024/06/25/%E8%AE%A1%E8%B0%B1%E5%8E%9F%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE%E4%B8%8E%E5%90%AB%E6%97%B6%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B/">
+          【<time datetime="2024-06-24T20:09:14.000Z">2024-06-25</time>】
+          计谱原理（一）基础知识回顾与含时薛定谔方程
+        </a>
+      </li>
+    
+  </ul>
+</div>
 
-{% block sidebar %}
-  {{ sidebar_template.render(false) }}
-{% endblock %}
+
+  </main>
+  <footer id="sea-footer-container">
+  <div class="sea-footer-row">
+    <div class="sea-footer-menu-link">
+      
+    </div>
+    <span class="split-line">|</span>
+    <span id="busuanzi_container_site_uv">
+      UV: <span id="busuanzi_value_site_uv"></span>
+    </span>
+  </div>
+  
+  
+  <div class="sea-footer-row">
+    <div class="sea-footer-copyright">
+      <span>©</span>
+      
+        2024
+      
+      <span>·</span>
+      RuswhY
+    </div>
+    <span class="split-line">|</span>
+    <div class="sea-footer-theme-by">
+      Theme by <a class="theme" href="https://github.com/hai-zou/hexo-theme-sea" target="_blank">Sea</a>
+    </div>
+  </div>
+</footer>
+  <div class="sea-menu-mobile-wrap">
+  <div class="sea-menu-mobile-inner">
+    
+      <a
+        class="sea-menu-link"
+        
+          target="_blank"
+        
+        href="https://github.com/Russellwhatever/russellwhatever.github.io/"
+      >
+        ruswhy
+      </a>
+    
+  </div>
+</div>
+<div id="sea-mobile-nav-dimmer"></div>
+  <div class="sea-float-tools-wrapper">
+  
+  <a class="sea-float-tools-btn" id="sea-back-to-top" href="#">
+    <i class="sea-font">arrow-up</i>
+  </a>
+
+  
+  
+
+  
+  <div class="sea-float-tools-btn" id="sea-theme-mode">
+    <i class="sea-font">theme</i>
+
+    <ul class="sea-theme-select-box">
+      <li class="sea-theme-select-item" id="sea-theme-auto">System</li>
+      <li class="sea-theme-select-item" id="sea-theme-light">Light</li>
+      <li class="sea-theme-select-item" id="sea-theme-dark">Dark</li>
+    </ul>
+  </div>
+</div>
+
+  
+<script src="/project/js/theme.js"></script>
+
+
+<script src="/project/js/main.js"></script>
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</body>
+</html>
