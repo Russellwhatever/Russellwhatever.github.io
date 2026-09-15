@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://ruswhy.top/logo.png">
+    <link rel="stylesheet" href="https://ruswhy.top/style.css">
+    <title>RSSAbout - Russell&#x27;s Digital Garden</title>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            
+                <a href="/">home</a>
+                
+            
+                <a href="/about">about</a>
+                
+                    <a href="/" class="logo"><img src="/logo.png" alt="logo"></a>
+                
+            
+                <a href="/blog">blog</a>
+                
+            
+                <a href="/contact">contact</a>
+                
+            
+
+            <a href="https://ruswhy.top/atom.xml" class="rss-link" title="RSS Feed">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 5px; opacity: 0.7;">
+                    <path d="M4 11a9 9 0 0 1 9 9"></path>
+                    <path d="M4 4a16 16 0 0 1 16 16"></path>
+                    <circle cx="5" cy="19" r="1"></circle>
+                </svg>
+            </a>
+        </nav>
+        <nav class="sub-nav">
+            
+                
+                <a href="/books">📖 books</a>
+            
+                
+                <a href="/movies">📽️ movies</a>
+            
+                
+                <a href="/sports">👟 sports</a>
+            
+                
+                <a href="/video-games">🕹️ video games</a>
+            
+                <span class="sep">|</span>
+                <a href="/music">🎹 music</a>
+            
+                
+                <a href="/pkm">🧠 pkm</a>
+            
+                
+                <a href="/puzzles">🧩 puzzles</a>
+            
+                
+                <a href="/else">{} else</a>
+            
+                <span class="sep">|</span>
+                <a href="/bookmark">🔖 bookmark</a>
+            
+                
+                <a href="/timeline">🕛 timeline</a>
+            
+        </nav>
+    </header>
+
+    <main>
+        
+<article>
+    <header>
+        <h1>RSSAbout</h1>
+        <div class="post-meta">
+            <span class="cdm-item">2026-05-01</span>
+            
+        </div>
+    </header>
+
+    
+    <nav class="toc">
+        <h2>MENU</h2>
+        <ul>
+            
+                <li><a href="https:&#x2F;&#x2F;ruswhy.top&#x2F;blog&#x2F;rssabout&#x2F;#rssabout">RSSAbout</a></li>
+                
+                    
+                        <li class="toc-h2"><a href="https:&#x2F;&#x2F;ruswhy.top&#x2F;blog&#x2F;rssabout&#x2F;#demo">Demo</a></li>
+                    
+                        <li class="toc-h2"><a href="https:&#x2F;&#x2F;ruswhy.top&#x2F;blog&#x2F;rssabout&#x2F;#kuai-su-shang-shou">快速上手</a></li>
+                    
+                        <li class="toc-h2"><a href="https:&#x2F;&#x2F;ruswhy.top&#x2F;blog&#x2F;rssabout&#x2F;#llm-gong-zuo-liu-liang-jie-duan">LLM 工作流（两阶段）</a></li>
+                    
+                        <li class="toc-h2"><a href="https:&#x2F;&#x2F;ruswhy.top&#x2F;blog&#x2F;rssabout&#x2F;#shu-chu-jie-gou">输出结构</a></li>
+                    
+                        <li class="toc-h2"><a href="https:&#x2F;&#x2F;ruswhy.top&#x2F;blog&#x2F;rssabout&#x2F;#zhi-chi-de-llm">支持的 LLM</a></li>
+                    
+                        <li class="toc-h2"><a href="https:&#x2F;&#x2F;ruswhy.top&#x2F;blog&#x2F;rssabout&#x2F;#mei-ri-ding-shi-yun-xing">每日定时运行</a></li>
+                    
+                        <li class="toc-h2"><a href="https:&#x2F;&#x2F;ruswhy.top&#x2F;blog&#x2F;rssabout&#x2F;#xiang-mu-jie-gou">项目结构</a></li>
+                    
+                        <li class="toc-h2"><a href="https:&#x2F;&#x2F;ruswhy.top&#x2F;blog&#x2F;rssabout&#x2F;#license">License</a></li>
+                    
+                
+            
+        </ul>
+    </nav>
+    
+
+    <section class="post-content">
+        <p>Available <a rel="external" href="https://github.com/Russellwhatever/RSSAbout">Here</a></p>
+<h1 id="rssabout">RSSAbout</h1>
+<p>将 RSS 订阅自动整理为每日新闻简报。</p>
+<p>读取 OPML 订阅文件 → 抓取当日文章 → (可选) LLM 逐篇提取事件、全局去重汇聚、按领域分类 → 输出 Markdown 日报，可选 HTML / PDF。</p>
+<h2 id="demo">Demo</h2>
+<p><a href="https://ruswhy.top/blog/rssabout/output/2026-03-21/">output/2026-03-21/</a> — 一份由关键词分类生成的日报样例（不含 LLM 摘要）。</p>
+<h2 id="kuai-su-shang-shou">快速上手</h2>
+<h3 id="1-fork-clone">1. Fork &amp; Clone</h3>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">git</span><span style="color: #A6E3A1;"> clone https://github.com/</span><span style="color: #94E2D5;">&lt;</span><span style="color: #A6E3A1;">your-usernam</span><span>e</span><span style="color: #94E2D5;">&gt;</span><span style="color: #A6E3A1;">/RSSAbout.git</span></span>
+<span class="giallo-l"><span style="color: #F38BA8;font-style: italic;">cd</span><span style="color: #A6E3A1;"> RSSAbout</span></span></code></pre><h3 id="2-chuang-jian-huan-jing">2. 创建环境</h3>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">conda</span><span style="color: #A6E3A1;"> env create -f environment.yaml</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">conda</span><span style="color: #A6E3A1;"> activate rssabout</span></span></code></pre><h3 id="3-pei-zhi">3. 配置</h3>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #9399B2;font-style: italic;"># 从示例文件创建本地配置</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">cp</span><span style="color: #A6E3A1;"> settings.example.yaml settings.yaml</span></span></code></pre>
+<p>编辑 <code>settings.yaml</code>：</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="yaml"><span class="giallo-l"><span style="color: #9399B2;font-style: italic;"># 必填：OPML 文件路径（从你的 RSS 阅读器导出）</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;">opml_path</span><span style="color: #94E2D5;">:</span><span style="color: #A6E3A1;"> &quot;/Users/you/path/to/subscriptions.opml&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #9399B2;font-style: italic;"># 可选：LLM 摘要（使用环境变量传入 API Key）</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;">llm</span><span style="color: #94E2D5;">:</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;">  enabled</span><span style="color: #94E2D5;">:</span><span style="color: #FAB387;"> true</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;">  provider</span><span style="color: #94E2D5;">:</span><span style="color: #A6E3A1;"> &quot;openai&quot;</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;">  api_base</span><span style="color: #94E2D5;">:</span><span style="color: #A6E3A1;"> &quot;https://api.deepseek.com/v1&quot;</span><span style="color: #9399B2;font-style: italic;">   # 或其他兼容 API</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;">  api_key</span><span style="color: #94E2D5;">:</span><span style="color: #A6E3A1;"> &quot;&quot;</span><span style="color: #9399B2;font-style: italic;">                                # 留空，用环境变量</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;">  model</span><span style="color: #94E2D5;">:</span><span style="color: #A6E3A1;"> &quot;deepseek-chat&quot;</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;">  max_tokens</span><span style="color: #94E2D5;">:</span><span style="color: #FAB387;"> 4096</span></span></code></pre><h3 id="4-she-zhi-api-key-ke-xuan-qi-yong-llm-zhai-yao-shi-xu-yao">4. 设置 API Key（可选，启用 LLM 摘要时需要）</h3>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #9399B2;font-style: italic;"># macOS / Linux — 写入 shell 配置，永久生效</span></span>
+<span class="giallo-l"><span style="color: #F38BA8;font-style: italic;">echo</span><span style="color: #A6E3A1;"> &#39;export LLM_API_KEY=sk-your-key-here&#39;</span><span style="color: #94E2D5;"> &gt;&gt;</span><span style="color: #A6E3A1;"> ~/.zshrc</span></span>
+<span class="giallo-l"><span style="color: #F38BA8;font-style: italic;">source</span><span style="color: #A6E3A1;"> ~/.zshrc</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #9399B2;font-style: italic;"># 或仅当前终端临时使用</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">export</span><span> LLM_API_KEY</span><span style="color: #94E2D5;">=</span><span>sk-your-key-here</span></span></code></pre>
+<p><strong>永远不要把 API Key 写入 <code>settings.yaml</code> 并提交到 Git。</strong> 本项目通过环境变量 <code>LLM_API_KEY</code>（或 <code>OPENAI_API_KEY</code>）读取密钥。<code>settings.yaml</code> 已在 <code>.gitignore</code> 中排除。</p>
+<h3 id="5-yun-xing">5. 运行</h3>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">python</span><span style="color: #A6E3A1;"> main.py</span><span style="color: #9399B2;font-style: italic;">                     # 默认今天</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">python</span><span style="color: #A6E3A1;"> main.py --date 2026-04-29</span><span style="color: #9399B2;font-style: italic;">   # 指定日期</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">python</span><span style="color: #A6E3A1;"> main.py --no-llm</span><span style="color: #9399B2;font-style: italic;">            # 仅关键词分类，不用 LLM</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">python</span><span style="color: #A6E3A1;"> main.py --html --pdf</span><span style="color: #9399B2;font-style: italic;">        # 同时生成 HTML 和 PDF</span></span></code></pre><h2 id="llm-gong-zuo-liu-liang-jie-duan">LLM 工作流（两阶段）</h2>
+<p>启用 <code>llm.enabled: true</code> 后：</p>
+<table><thead><tr><th>阶段</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>Phase 1</strong></td><td>逐篇送入 LLM，提取每篇文章中的<strong>所有独立事件</strong>（一篇可能含多个事件）。每个事件含：日期、一句话摘要、各方评论/观点（附观点发表人）、项目/参考链接、信息来源</td></tr>
+<tr><td><strong>Phase 2</strong></td><td>汇总所有事件，LLM 进行全局去重（同一事件多报道合并）、汇聚（同事件多角度融合）、自定领域分类，输出领域→事件层级的 Markdown 日报</td></tr>
+</tbody></table>
+<p>LLM 不可用时自动退回关键词分类模式，不会中断报告生成。</p>
+<h2 id="shu-chu-jie-gou">输出结构</h2>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="plain"><span class="giallo-l"><span>output/2026-04-30/</span></span>
+<span class="giallo-l"><span>├── README.md            # 日报（LLM 领域→事件 或 关键词列表）</span></span>
+<span class="giallo-l"><span>├── README.html          # HTML（--html）</span></span>
+<span class="giallo-l"><span>├── README.pdf           # PDF（--pdf）</span></span>
+<span class="giallo-l"><span>└── articles/            # 按来源分组的单篇文章</span></span>
+<span class="giallo-l"><span>    └── 来源名/</span></span>
+<span class="giallo-l"><span>        └── uid-标题.md</span></span></code></pre><h2 id="zhi-chi-de-llm">支持的 LLM</h2>
+<p>所有兼容 OpenAI API 的服务，修改 <code>api_base</code> + <code>model</code> 即可：</p>
+<table><thead><tr><th>服务</th><th>api_base</th><th>model 示例</th></tr></thead><tbody>
+<tr><td>DeepSeek</td><td><code>https://api.deepseek.com/v1</code></td><td><code>deepseek-chat</code></td></tr>
+<tr><td>通义千问</td><td><code>https://dashscope.aliyuncs.com/compatible-mode/v1</code></td><td><code>qwen-plus</code></td></tr>
+<tr><td>Moonshot</td><td><code>https://api.moonshot.cn/v1</code></td><td><code>moonshot-v1-8k</code></td></tr>
+<tr><td>OpenAI</td><td><code>https://api.openai.com/v1</code></td><td><code>gpt-4o-mini</code></td></tr>
+<tr><td>Anthropic</td><td>原生支持，设 <code>provider: "anthropic"</code></td><td><code>claude-sonnet-4-6</code></td></tr>
+</tbody></table>
+<h3 id="github-yin-si-bian-liang">GitHub 隐私变量</h3>
+<p>如果你通过 GitHub Actions 定时运行，在仓库 <strong>Settings → Secrets and variables → Actions</strong> 中添加 <code>LLM_API_KEY</code>，workflow 中通过 <code>${{ secrets.LLM_API_KEY }}</code> 引用，不会暴露在日志或代码中。</p>
+<h2 id="mei-ri-ding-shi-yun-xing">每日定时运行</h2>
+<h3 id="macos-launchd">macOS (launchd)</h3>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">cat</span><span style="color: #94E2D5;"> &gt;</span><span style="color: #A6E3A1;"> ~/Library/LaunchAgents/com.rssabout.daily.plist</span><span style="color: #94E2D5;"> &lt;&lt;</span><span style="color: #A6E3A1;"> &#39;EOF&#39;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">  &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">&lt;plist version=&quot;1.0&quot;&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">&lt;dict&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">    &lt;key&gt;Label&lt;/key&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">    &lt;string&gt;com.rssabout.daily&lt;/string&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">    &lt;key&gt;EnvironmentVariables&lt;/key&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">    &lt;dict&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">        &lt;key&gt;LLM_API_KEY&lt;/key&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">        &lt;string&gt;sk-your-key-here&lt;/string&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">    &lt;/dict&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">    &lt;key&gt;ProgramArguments&lt;/key&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">    &lt;array&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">        &lt;string&gt;/path/to/RSSAbout/run.sh&lt;/string&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">    &lt;/array&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">    &lt;key&gt;StartCalendarInterval&lt;/key&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">    &lt;dict&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">        &lt;key&gt;Hour&lt;/key&gt;&lt;integer&gt;8&lt;/integer&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">        &lt;key&gt;Minute&lt;/key&gt;&lt;integer&gt;0&lt;/integer&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">    &lt;/dict&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">    &lt;key&gt;StandardOutPath&lt;/key&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">    &lt;string&gt;/tmp/rssabout.log&lt;/string&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">    &lt;key&gt;StandardErrorPath&lt;/key&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">    &lt;string&gt;/tmp/rssabout.err&lt;/string&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">&lt;/dict&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">&lt;/plist&gt;</span></span>
+<span class="giallo-l"><span style="color: #A6E3A1;">EOF</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">launchctl</span><span style="color: #A6E3A1;"> load ~/Library/LaunchAgents/com.rssabout.daily.plist</span></span></code></pre><h3 id="linux-crontab">Linux (crontab)</h3>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">0</span><span style="color: #FAB387;"> 8</span><span> * * *</span><span style="color: #A6E3A1;"> LLM_API_KEY=sk-... /path/to/RSSAbout/run.sh</span></span></code></pre><h2 id="xiang-mu-jie-gou">项目结构</h2>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="plain"><span class="giallo-l"><span>RSSAbout/</span></span>
+<span class="giallo-l"><span>├── settings.example.yaml   # 配置模板（可提交）</span></span>
+<span class="giallo-l"><span>├── settings.yaml           # 本地配置（gitignore，不提交）</span></span>
+<span class="giallo-l"><span>├── environment.yaml        # Conda 环境</span></span>
+<span class="giallo-l"><span>├── main.py                 # 入口</span></span>
+<span class="giallo-l"><span>├── run.sh                  # 便捷运行</span></span>
+<span class="giallo-l"><span>├── src/</span></span>
+<span class="giallo-l"><span>│   ├── config.py           # 配置加载</span></span>
+<span class="giallo-l"><span>│   ├── opml_parser.py      # OPML 解析 (xml.etree)</span></span>
+<span class="giallo-l"><span>│   ├── rss_fetcher.py      # RSS 并发抓取</span></span>
+<span class="giallo-l"><span>│   ├── classifier.py       # 关键词分类（LLM fallback）</span></span>
+<span class="giallo-l"><span>│   ├── llm_summarizer.py   # LLM 两阶段流水线</span></span>
+<span class="giallo-l"><span>│   ├── report_generator.py # 报告生成 (MD / HTML / PDF)</span></span>
+<span class="giallo-l"><span>│   ├── converter.py        # MD → HTML / PDF</span></span>
+<span class="giallo-l"><span>│   └── interfaces.py       # 预留扩展接口</span></span>
+<span class="giallo-l"><span>├── output/                 # 日报（gitignore）</span></span>
+<span class="giallo-l"><span>└── data/                   # 运行时元数据（gitignore）</span></span></code></pre><h2 id="license">License</h2>
+<p>MIT</p>
+
+    </section>
+</article>
+
+    </main>
+</body>
+</html>

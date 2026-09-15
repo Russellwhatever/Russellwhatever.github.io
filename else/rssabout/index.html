@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://ruswhy.top/logo.png">
+    <link rel="stylesheet" href="https://ruswhy.top/style.css">
+    <title>RSSAbout - Russell&#x27;s Digital Garden</title>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            
+                <a href="/">home</a>
+                
+            
+                <a href="/about">about</a>
+                
+                    <a href="/" class="logo"><img src="/logo.png" alt="logo"></a>
+                
+            
+                <a href="/blog">blog</a>
+                
+            
+                <a href="/contact">contact</a>
+                
+            
+
+            <a href="https://ruswhy.top/atom.xml" class="rss-link" title="RSS Feed">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 5px; opacity: 0.7;">
+                    <path d="M4 11a9 9 0 0 1 9 9"></path>
+                    <path d="M4 4a16 16 0 0 1 16 16"></path>
+                    <circle cx="5" cy="19" r="1"></circle>
+                </svg>
+            </a>
+        </nav>
+        <nav class="sub-nav">
+            
+                
+                <a href="/books">📖 books</a>
+            
+                
+                <a href="/movies">📽️ movies</a>
+            
+                
+                <a href="/sports">👟 sports</a>
+            
+                
+                <a href="/video-games">🕹️ video games</a>
+            
+                <span class="sep">|</span>
+                <a href="/music">🎹 music</a>
+            
+                
+                <a href="/pkm">🧠 pkm</a>
+            
+                
+                <a href="/puzzles">🧩 puzzles</a>
+            
+                
+                <a href="/else">{} else</a>
+            
+                <span class="sep">|</span>
+                <a href="/bookmark">🔖 bookmark</a>
+            
+                
+                <a href="/timeline">🕛 timeline</a>
+            
+        </nav>
+    </header>
+
+    <main>
+        
+<article>
+    <header>
+        <h1>RSSAbout</h1>
+        <div class="post-meta">
+            <span class="cdm-item">2026-04-01</span>
+            
+        </div>
+    </header>
+
+    
+
+    <section class="post-content">
+        <p>一个将 RSS 订阅自动整理为每日新闻简报的工具。读取 OPML 订阅文件，抓取当日文章，通过 LLM 提取事件、去重归类，最终输出 Markdown 日报，可选转换为 HTML 或 PDF。</p>
+<p>支持两阶段 LLM 流水线（先逐篇提取事件，再跨来源去重合并），也提供关键词分类作为无 LLM 时的备选方案。兼容 OpenAI 系 API 和 Claude，API Key 通过环境变量注入，不写入配置文件。支持 macOS launchd 和 Linux crontab 定时自动运行。MIT 协议开源。</p>
+
+    </section>
+</article>
+
+    </main>
+</body>
+</html>
